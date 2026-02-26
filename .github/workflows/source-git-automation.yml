@@ -38,8 +38,9 @@ jobs:
 
     steps:
       - name: Source-git Automation
-        uses: redhat-plumbers-in-action/source-git-automation@v1
+        uses: jamacku/source-git-automation@main
         with:
           pr-metadata: ${{ needs.download-metadata.outputs.pr-metadata }}
           jira-api-token: ${{ secrets.JIRA_API_TOKEN }}
+          gemini-api-token: ${{ secrets.GEMINI_API_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
