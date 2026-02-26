@@ -15,6 +15,7 @@ typedef enum TimerBase {
         TIMER_UNIT_INACTIVE,
         TIMER_CALENDAR,
         _TIMER_BASE_MAX,
+        _TIMER_BASE_MIN,
         _TIMER_BASE_INVALID = -EINVAL,
 } TimerBase;
 
@@ -77,7 +78,6 @@ uint64_t timer_next_elapse_monotonic(const Timer *t);
 
 void timer_free_values(Timer *t);
 
-extern const UnitVTable timer_vtable;
 extern const ActivationDetailsVTable activation_details_timer_vtable;
 
 const char* timer_base_to_string(TimerBase i) _const_;
