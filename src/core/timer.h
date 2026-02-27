@@ -77,7 +77,7 @@ struct ActivationDetailsTimer {
 uint64_t timer_next_elapse_monotonic(const Timer *t);
 
 void timer_free_values(Timer *t);
-
+extern const UnitVTable timer_vtable;
 extern const ActivationDetailsVTable activation_details_timer_vtable;
 
 const char* timer_base_to_string(TimerBase i) _const_;
